@@ -16,23 +16,23 @@ fi
 
 ### Colors
 
-local boldgreen="%{$fg_bold[green]%}"
-local green="%{$fg_no_bold[green]%}"
-local boldred="%{$fg_bold[red]%}"
-local red="%{$fg_no_bold[red]%}"
-local boldcyan="%{$fg_bold[cyan]%}"
-local cyan="%{$fg_no_bold[cyan]%}"
-local boldyellow="%{$fg_bold[yellow]%}"
-local yellow="%{$fg_no_bold[yellow]%}"
-local boldblue="%{$fg_bold[blue]%}"
-local blue="%{$fg_no_bold[blue]%}"
-local boldmagenta="%{$fg_bold[magenta]%}"
-local magenta="%{$fg_no_bold[magenta]%}"
-local boldwhite="%{$fg_bold[white]%}"
-local white="%{$fg_no_bold[white]%}"
-local bolddefault="%{$fg_bold[default]%}"
-local default="%{$fg_no_bold[default]%}"
-local reset="%{$reset_color%}"
+boldgreen="%{$fg_bold[green]%}"
+green="%{$fg_no_bold[green]%}"
+boldred="%{$fg_bold[red]%}"
+red="%{$fg_no_bold[red]%}"
+boldcyan="%{$fg_bold[cyan]%}"
+cyan="%{$fg_no_bold[cyan]%}"
+boldyellow="%{$fg_bold[yellow]%}"
+yellow="%{$fg_no_bold[yellow]%}"
+boldblue="%{$fg_bold[blue]%}"
+blue="%{$fg_no_bold[blue]%}"
+boldmagenta="%{$fg_bold[magenta]%}"
+magenta="%{$fg_no_bold[magenta]%}"
+boldwhite="%{$fg_bold[white]%}"
+white="%{$fg_no_bold[white]%}"
+bolddefault="%{$fg_bold[default]%}"
+default="%{$fg_no_bold[default]%}"
+reset="%{$reset_color%}"
 
 ### Virtualenv
 
@@ -87,9 +87,9 @@ show_git_prompt() {
   echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${info}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
 }
 
-local _PATH="$boldcyan%c$reset"
-local _JOBS="${blue}fg:${bolddefault}%j$reset"
-local _EXIT="%(?.$boldgreen.$boldred)$returnsymbol"
+_PATH="$boldcyan%c$reset"
+_JOBS="${blue}fg:${bolddefault}%j$reset"
+_EXIT="%(?.$boldgreen.$boldred)$returnsymbol"
 
 if [[ $EUID -eq 0 ]]; then
   _USERNAME="$boldred%n"
