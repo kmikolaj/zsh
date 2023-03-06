@@ -1,6 +1,8 @@
 # initialize autocompletion
 autoload -Uz compinit && compinit
 
+zmodload -i zsh/complist
+
 # completion override
 fpath=($HOME/.zsh/completions $fpath)
 
@@ -53,3 +55,6 @@ zstyle ':completion:*:man:*' menu yes select
 
 hosts=(`hostname` "$_ssh_hosts[@]" "$_etc_hosts[@]" localhost)
 zstyle ':completion:*:hosts' hosts $hosts
+
+# automatically load bash completion functions
+autoload -U +X bashcompinit && bashcompinit

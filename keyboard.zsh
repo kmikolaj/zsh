@@ -86,5 +86,8 @@ bindkey -s 'Om' '-'
 bindkey -s 'Ok' '+'
 bindkey -s 'OM' '\n'
 
+# Undo Tab completion
+bindkey -M menuselect '^[' undo
+
 # '/' is not part of the word
 WORDCHARS=${WORDCHARS/\/}

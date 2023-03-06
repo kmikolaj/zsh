@@ -85,6 +85,9 @@ alias -g U="|sort -u"
 alias -g N="&>/dev/null"
 alias -g C="|column -t"
 
+# Suffix alias
+alias -s log="tail -f"
+
 # Common typos
 alias sl='ls'
 alias vf='cd'

@@ -17,8 +17,8 @@ function find_fzf_files() {
 		return 1
 	fi
 
-	source ${fzf_base}/key-bindings.zsh
-	source ${fzf_base}/completion.zsh
+	[ -f "${fzf_base}/key-bindings.zsh" ] && source "${fzf_base}/key-bindings.zsh"
+	[ -f "${fzf_base}/completion.zsh" ] && source "${fzf_base}/completion.zsh"
 }
 
 if (( $+commands[fd] )); then

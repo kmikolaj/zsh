@@ -56,14 +56,16 @@ zle -N bracketed-paste bracketed-paste-magic
 
 export HISTFILE=$HOME/.zsh/history
 export HISTSIZE=5000
-export SAVEHIST=5000
+export SAVEHIST=10000
 export EDITOR=vim
 #export BROWSER=firefox
 export MAKEFLAGS="-j$(nproc)"
 
 # Options
 setopt appendhistory
-setopt no_share_history
+#setopt incappendhistory
+setopt extendedhistory
+setopt nosharehistory
 setopt autocd
 setopt extendedglob
 setopt nonomatch
@@ -75,8 +77,8 @@ setopt autopushd
 setopt pushdignoredups
 setopt pushdsilent
 setopt multios
-setopt hist_ignore_all_dups
-#setopt print_exit_value
+setopt histignorealldups
+#setopt printexitvalue
 setopt nobeep
 setopt nointeractivecomments
 
@@ -92,14 +94,14 @@ umask 027
 # Environment
 source ${HOME}/.zsh/config/environment.zsh
 
-# Keys
-source ${HOME}/.zsh/config/keyboard.zsh
-
 # Aliases
 source ${HOME}/.zsh/config/aliases.zsh
 
 # Completions
 source ${HOME}/.zsh/config/completions.zsh
+
+# Keys
+source ${HOME}/.zsh/config/keyboard.zsh
 
 # Functions
 source ${HOME}/.zsh/config/functions.zsh
