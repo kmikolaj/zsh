@@ -42,7 +42,7 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 export GREP_COLORS='mt=32'
 
 # less highlight
-export LESS=' -R '
+export LESS=' -R -x4 '
 
 # Colorful manuals
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -57,6 +57,10 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 #export LESS_TERMCAP_md=$'\E[01;31m'
 #export LESS_TERMCAP_so=$'\E[01;44;33m'
 #export LESS_TERMCAP_us=$'\E[01;32m'
+
+# bat
+export BAT_THEME="Solarized (dark)"
+export BAT_STYLE="numbers,changes,rule"
 
 # Compose key - universal X11 method
 export GTK_IM_MODULE=ibus
