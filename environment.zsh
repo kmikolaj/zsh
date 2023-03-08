@@ -78,5 +78,9 @@ export SDL_SOUNDFONTS=/usr/share/soundfonts/FluidR3_GM.sf2
 
 # zsh autosuggestions 
 # color solarized dark
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=13'
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+# color solarized light
+#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=12'
+
+# visual studio code embedded terminal
+source ${HOME}/.zsh/config/vscode.zsh
