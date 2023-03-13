@@ -29,7 +29,7 @@ if [ ! -z $WAYLAND_DISPLAY ]; then
 fi
 
 # alias
-alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'
+alias update='sudo apt update && sudo apt full-upgrade && sudo apt autoremove --purge'
 alias vnc6000='vncviewer -PasswordFile=$HOME/.vnc/passwd'
 
 # Wireshark remote capture
