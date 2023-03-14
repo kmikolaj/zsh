@@ -1,8 +1,5 @@
 # hostname shodan
 
-# less highlight
-export LESSOPEN='|/usr/bin/lesspipe.sh %s'
-
 # toolchain directory
 export LOCAL_TOOLCHAIN_PATH=${HOME}/virt/rg/toolchain
 

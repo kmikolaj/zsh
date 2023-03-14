@@ -36,6 +36,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting
 #zinit light zsh-users/zsh-history-substring-search
 zinit light wizard-28/git-flow-completion
+zinit light kmikolaj/lesspipe
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 

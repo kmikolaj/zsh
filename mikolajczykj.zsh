@@ -1,8 +1,5 @@
 # hostname mikolajczykj
 
-# less highlight
-export LESSOPEN='|/usr/bin/lesspipe %s'
-
 # toolchain directory
 export LOCAL_TOOLCHAIN_PATH=${HOME}/tools/toolchains/cmake
 export LOCAL_COMPILER_PATH=${HOME}/tools/toolchains/gcc
