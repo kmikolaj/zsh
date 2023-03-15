@@ -29,20 +29,21 @@ zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-dir
 
 zstyle ':completion:*' completer _oldlist _expand _complete _files
 
-# fix tab-completion: files with _ and ' ' in names
-#zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[.,_-]=* r:|=*' 'l:|=* r:|=*'
-#zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# case sensitive
+#zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # case insensitive
-#zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=* r:|=*' 'm:{a-z}={A-Z} l:|=* r:|=*'
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
+#zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
+
+# case insensitive + hyphen insensitive
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]_-}={[:upper:]_-}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
 
 # rehash
 zstyle ':completion:*' rehash true
 
 # complete manual by their section
 zstyle ':completion:*:manuals' separate-sections true
-zstyle ':completion:*:manuals.*' insert-sections   true
+zstyle ':completion:*:manuals.*' insert-sections true
 zstyle ':completion:*:man:*' menu yes select
 
 # cache
