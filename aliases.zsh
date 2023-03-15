@@ -10,7 +10,7 @@ if which exa &> /dev/null; then
 	alias la='ll -a'
 	alias lt='ll -rt modified'
 else
-	alias ls='ls --color -v -F -N -h --group-directories-first'
+	alias ls='ls -T0 --color -v -F -N -h --group-directories-first'
 	alias ll='ls -l'
 	alias la='ll -A'
 	alias lt='ll -rt'

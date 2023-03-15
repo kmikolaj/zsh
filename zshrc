@@ -93,6 +93,10 @@ limit coredumpsize 0
 # more secure umask
 umask 027
 
+# universal tab size
+tabs -0
+tabs -4
+
 # Environment
 source ${HOME}/.zsh/config/environment.zsh
 
