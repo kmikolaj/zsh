@@ -19,7 +19,7 @@ zstyle ':completion:*:*:*:*:*' menu select
 #zstyle ':completion:*' list-colors ''
 
 # complete . and .. special directories
-#zstyle ':completion:*' special-dirs true
+zstyle -e ':completion:*' special-dirs '[[ $PREFIX = (../)#(|.|..) ]] && reply=(..)'
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USERNAME -o pid,user,comm -w -w"
