@@ -57,7 +57,7 @@ zle -N self-insert url-quote-magic
 zle -N bracketed-paste bracketed-paste-magic
 
 export HISTFILE=$HOME/.zsh/history
-export HISTSIZE=5000
+export HISTSIZE=50000
 export SAVEHIST=10000
 export EDITOR=vim
 #export BROWSER=firefox
@@ -80,6 +80,8 @@ setopt pushdignoredups
 setopt pushdsilent
 setopt multios
 setopt histignorealldups
+setopt histignorespace
+setopt histverify
 #setopt printexitvalue
 setopt nobeep
 setopt nointeractivecomments
