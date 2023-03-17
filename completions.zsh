@@ -3,9 +3,6 @@ autoload -Uz compinit && compinit
 
 zmodload -i zsh/complist
 
-# completion override
-fpath=($HOME/.zsh/completions $fpath)
-
 unsetopt menu_complete
 unsetopt flowcontrol
 setopt auto_menu

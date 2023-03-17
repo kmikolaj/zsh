@@ -51,6 +51,9 @@ fi
 #autoload -U zsh-mime-setup
 #zsh-mime-setup
 
+# completion override
+fpath=($HOME/.zsh/config/completions $fpath)
+
 # Quotes when handling urls
 autoload -U url-quote-magic bracketed-paste-magic
 zle -N self-insert url-quote-magic
