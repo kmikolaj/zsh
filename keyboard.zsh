@@ -57,9 +57,6 @@ else
   bindkey -M viins "^[[3~" delete-char
 fi
 
-# [Space] - don't do history expansion
-bindkey ' ' magic-space
-
 # history-search - cursor not moved (superior)
 if [[ -n "${terminfo[kcuu1]}" ]]; then
   bindkey -M emacs "${terminfo[kcuu1]}" history-beginning-search-backward
@@ -78,6 +75,14 @@ bindkey -M viins '^[[1;3C' forward-word
 # [Alt-LeftArrow] - move backward one word
 bindkey -M emacs '^[[1;3D' backward-word
 bindkey -M viins '^[[1;3D' backward-word
+
+# [Space] - don't do history expansion
+bindkey ' ' magic-space
+
+# Edit the current command line in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
 
 # Keybindings for gnome-terminal
 bindkey -s 'Oo' '/'
