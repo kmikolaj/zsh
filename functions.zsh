@@ -77,3 +77,9 @@ update() {
 	[ -d ${workdir} ] || return 1
 	pushd ${workdir} && yay -a -f -G ${package} && cd ${package} && makepkg -firsC && popd
 }
+
+ssh-copy-key() {
+	local destination=$1
+	[ -z ${destination} ] && return 1
+	cat ${HOME}/.ssh/id_rsa.pub | ssh "$destination" "mkdir -p ~/.ssh; cat >> ~/.ssh/authorized_keys"
+}
