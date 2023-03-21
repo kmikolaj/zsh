@@ -3,6 +3,8 @@ alias grep='grep --color=auto'
 alias cgrep='grep --color=always'
 alias egrep='grep -E'
 alias fgrep='grep -F'
+alias hgrep="fc -El 0 | grep"
+alias sgrep='grep -I -R -n -H -C 5 --exclude-dir={.git,.svn,CVS}'
 
 if which exa &> /dev/null; then
 	alias ls='exa -g -F --group-directories-first'
@@ -20,10 +22,13 @@ alias lx='ll -BX'                   # sort by extension
 alias lz='ll -rS'                   # sort by size
 alias lm='la | more'
 alias open='xdg-open'
+alias unexport='unset'
 alias dir='ls'
 alias diff='colordiff -s'
 #alias rm='rm -vI'
 alias ln='ln -i'
+alias h='history'
+alias p='ps -f'
 alias wget='wget -c'
 alias wgetimages='wget -nd -r -l 2 -A jpg,jpeg,png,gif,bmp'
 alias cp='cp -i'
@@ -58,6 +63,8 @@ alias dd='dd status=progress'
 alias zip='zip -y'
 alias wl-copy='wl-copy -n'
 alias ffplay='ffplay -autoexit -nodisp -loglevel 8'
+# search
+alias ff='fd -t file -g'
 # net-tools
 alias ifconfig='ip addr show'
 alias route='ip route show'
@@ -77,13 +84,17 @@ alias abs=asp
 
 # Global alias
 alias -g L="|less"
+alias -g LL="2>&1 |less"
 alias -g T="|tail"
 alias -g H="|head"
 alias -g G="|cgrep"
 alias -g S="|sort"
-alias -g U="|sort -u"
+alias -g SU="|sort -u"
+alias -g SN='|sort -n -r'
 alias -g N="&>/dev/null"
+alias -g NE="2>/dev/null"
 alias -g C="|column -t"
+alias -g CA="2>&1 |bat -A"
 
 # Suffix alias
 alias -s log="tail -f"
