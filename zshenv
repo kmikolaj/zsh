@@ -17,3 +17,5 @@ export LC_ADDRESS="pl_PL.UTF-8"
 export LC_TELEPHONE="pl_PL.UTF-8"
 export LC_MEASUREMENT="pl_PL.UTF-8"
 #export LC_IDENTIFICATION="pl_PL.UTF-8"
+
+# vim: set ai noet ts=4 sts=4 sw=4 ft=zsh:
