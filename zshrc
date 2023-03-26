@@ -120,6 +120,9 @@ source ${HOME}/.zsh/config/functions.zsh
 # Plugins
 source ${HOME}/.zsh/config/plugins.zsh
 
+# Directories
+source ${HOME}/.zsh/config/directories.zsh
+
 # Hostname specific
 if [ -e "${HOME}/.zsh/config/$(hostname).zsh" ]; then
 	source "${HOME}/.zsh/config/$(hostname).zsh"
