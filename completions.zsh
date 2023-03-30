@@ -3,11 +3,12 @@ autoload -Uz compinit && compinit
 
 zmodload -i zsh/complist
 
-unsetopt menu_complete
+unsetopt menucomplete
 unsetopt flowcontrol
-setopt auto_menu
-setopt complete_in_word
-setopt always_to_end
+setopt automenu
+setopt completeinword
+setopt alwaystoend
+setopt nolistambiguous
 
 # menu
 zstyle ':completion:*:*:*:*:*' menu select
@@ -43,9 +44,12 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:manuals.*' insert-sections true
 zstyle ':completion:*:man:*' menu yes select
 
+# ignore completion functions for commands you don't have
+zstyle ':completion:*:functions' ignored-patterns '_*'
+
 # cache
-#zstyle ':completion:*' use-cache yes
-#zstyle ':completion:*' cache-path $ZSH_CACHE_DIR
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' cache-path $ZSH_CACHE_DIR
 
 # host completion /* add brackets as vim can't parse zsh's complex cmdlines 8-) {{{ */
 [ -r ~/.ssh/known_hosts ] && _ssh_hosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
