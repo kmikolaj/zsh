@@ -4,6 +4,7 @@ export XDG_CACHE_HOME=${XDG_CACHE_HOME:=${HOME}/.cache}
 
 # zsh
 export ZSH_CACHE_DIR=${XDG_CACHE_HOME}/zsh
+export ZSH_COMPDUMP=${ZSH_CACHE_DIR}/zcompdump
 
 # Localization
 #export LC_CTYPE="pl_PL.UTF-8"

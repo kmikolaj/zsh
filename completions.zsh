@@ -1,5 +1,5 @@
 # initialize autocompletion
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
 
 zmodload -i zsh/complist
 
