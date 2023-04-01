@@ -82,5 +82,8 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 # color solarized light
 #export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=12'
 
+# ripgrep config
+export RIPGREP_CONFIG_PATH=${XDG_CONFIG_HOME}/ripgrep/rg.conf
+
 # visual studio code embedded terminal
 source ${HOME}/.zsh/config/vscode.zsh
