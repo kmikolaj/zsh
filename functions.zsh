@@ -83,3 +83,15 @@ ssh-copy-key() {
 	[ -z ${destination} ] && return 1
 	cat ${HOME}/.ssh/id_rsa.pub | ssh "$destination" "mkdir -p ~/.ssh; cat >> ~/.ssh/authorized_keys"
 }
+
+is-remote-session() {
+	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+		return 0
+	fi
+
+	case $(ps -o comm= -p "$PPID") in
+		sshd|*/sshd) return 0;;
+	esac
+
+	return 1
+}
