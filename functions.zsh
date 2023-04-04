@@ -1,3 +1,7 @@
+take() {
+	mkdir -p $@ && cd ${@:$#}
+}
+
 # Wireshark remote capture
 capture() {
 	local host=${1}
