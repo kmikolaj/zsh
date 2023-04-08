@@ -9,6 +9,7 @@ setopt automenu
 setopt completeinword
 setopt alwaystoend
 setopt nolistambiguous
+setopt nocompletealiases
 
 # menu
 zstyle ':completion:*:*:*:*:*' menu select
@@ -43,6 +44,10 @@ zstyle ':completion:*' rehash true
 zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:manuals.*' insert-sections true
 zstyle ':completion:*:man:*' menu yes select
+
+# vim ignore binary files 
+zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.(pyc|o)'
+zstyle ':completion:*:*:nvim:*:*files' ignored-patterns '*.(pyc|o)'
 
 # ignore completion functions for commands you don't have
 zstyle ':completion:*:functions' ignored-patterns '_*'
