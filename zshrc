@@ -141,4 +141,9 @@ precmd () {
 # To customize prompt, run `p10k configure` or edit ~/.zsh/config/p10k.zsh.
 [[ ! -f ~/.zsh/config/p10k.zsh ]] || source ~/.zsh/config/p10k.zsh
 
+# Right prompt exceptions
+if grep -E "^mc$" /proc/$PPID/cmdline &> /dev/null; then
+	typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+fi
+
 # vim: set ai noet ts=4 sts=4 sw=4 ft=zsh:
