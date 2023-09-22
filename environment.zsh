@@ -85,5 +85,8 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 # ripgrep config
 export RIPGREP_CONFIG_PATH=${XDG_CONFIG_HOME}/ripgrep/rg.conf
 
+# eza dashes
+export EXA_COLORS="xx=0"
+
 # visual studio code embedded terminal
 source ${HOME}/.zsh/config/vscode.zsh
