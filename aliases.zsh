@@ -63,6 +63,7 @@ alias dd='dd status=progress'
 alias zip='zip -y'
 alias wl-copy='wl-copy -n'
 alias ffplay='ffplay -autoexit -nodisp -loglevel 8'
+alias atmux='tmux new-session -A -s'
 # search
 alias ff='fd -t file -g'
 # net-tools
