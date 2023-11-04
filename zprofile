@@ -19,4 +19,7 @@ elif [[ ${archlike[(r)$distro]} == $distro ]]; then
 	fi
 fi
 
+# freetype
+export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
+
 # vim: set ai noet ts=4 sts=4 sw=4 ft=zsh:
