@@ -89,6 +89,7 @@ alias -g LL="2>&1 |less"
 alias -g T="|tail"
 alias -g H="|head"
 alias -g G="|cgrep"
+alias -g B="|bat --paging=always"
 alias -g S="|sort"
 alias -g SU="|sort -u"
 alias -g SN='|sort -n -r'

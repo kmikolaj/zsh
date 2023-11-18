@@ -43,7 +43,8 @@ export GREP_COLORS='mt=32'
 
 # less highlight
 export LESS=' -R -x4 '
-export LESSCOLORIZER='pygmentize -O style=solarized-dark'
+#export LESSCOLORIZER='pygmentize -O style=solarized-dark'
+export LESSCOLORIZER=bat
 
 # Colorful manuals
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
