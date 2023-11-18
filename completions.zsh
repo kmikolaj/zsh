@@ -45,7 +45,7 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:manuals.*' insert-sections true
 zstyle ':completion:*:man:*' menu yes select
 
-# vim ignore binary files 
+# vim ignore binary files
 zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.(pyc|o)'
 zstyle ':completion:*:*:nvim:*:*files' ignored-patterns '*.(pyc|o)'
 
