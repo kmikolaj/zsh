@@ -10,17 +10,19 @@ if which exa &> /dev/null; then
 	alias ls='exa -g -F --group-directories-first'
 	alias ll='ls -l'
 	alias la='ll -a'
-	alias lt='ll -rt modified'
+	alias lt='ll -s modified'
+	alias lz='ll -s size'
+	alias lx='ll -s extension'
 else
 	alias ls='ls -T0 --color -v -F -N -h --group-directories-first'
 	alias ll='ls -l'
 	alias la='ll -A'
-	alias lt='ll -rt'
+	alias lt='ll -rt'                   # sort by modified
+	alias lz='ll -rS'                   # sort by size
+	alias lx='ll -X'                    # sort by extension
 fi
-alias lr='ls -R'                    # recursive ls
-alias lx='ll -BX'                   # sort by extension
-alias lz='ll -rS'                   # sort by size
-alias lm='la | more'
+alias lr='ls -R'                        # recursive ls
+alias lm='la | less -RFe'
 alias open='xdg-open'
 alias unexport='unset'
 alias dir='ls'
