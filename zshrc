@@ -61,7 +61,7 @@ zle -N self-insert url-quote-magic
 zle -N bracketed-paste bracketed-paste-magic
 
 export HISTFILE=$HOME/.zsh/history
-export HISTORY_IGNORE="(*sudo -S*|git stash drop*)"
+export HISTORY_IGNORE="(*sudo -S*|git stash drop*|reboot|poweroff)"
 export HISTSIZE=50000
 export SAVEHIST=10000
 export EDITOR=vim
