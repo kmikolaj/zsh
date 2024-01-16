@@ -98,6 +98,7 @@ alias -g N="&>/dev/null"
 alias -g NE="2>/dev/null"
 alias -g C="|column -t"
 alias -g CA="2>&1 |bat -A"
+alias -g TEE="2>&1 |tee"
 
 # Suffix alias
 alias -s log="tail -f"
