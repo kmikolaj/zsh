@@ -9,9 +9,9 @@ distro=$(grep -E '^ID=' /etc/os-release | cut -f2 -d'=')
 ubuntulike=(pop ubuntu)
 archlike=(arch manjaro)
 
-if [[ ${ubuntulike[(r)$distro]} == $distro ]]; then
+if [[ $(echo ${ubuntulike[@]} | grep -Fw $distro) ]]; then
 	export DEBUGINFOD_URLS="https://debuginfod.ubuntu.com"
-elif [[ ${archlike[(r)$distro]} == $distro ]]; then
+elif [[ $(echo ${archlike[@]} | grep -Fw $distro) ]]; then
 	export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 	# show latest archlinux.org post
 	if [ -x ~/bin/archlinux-last-feed ]; then
