@@ -65,7 +65,8 @@ export HISTFILE=$HOME/.zsh/history
 export HISTORY_IGNORE="(*sudo -S*|git stash drop*|reboot|poweroff)"
 export HISTSIZE=50000
 export SAVEHIST=10000
-export EDITOR=vim
+export EDITOR=nvim
+export TIG_EDITOR=nvim
 #export BROWSER=firefox
 export MAKEFLAGS="-j$(nproc)"
 
