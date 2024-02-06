@@ -48,7 +48,6 @@ export LESSCOLORIZER=bat
 
 # man coloring
 export MANPAGER="less -R -i -s -M +Gg --use-color"
-export MANROFFOPT="-P -c"
 
 # bat
 export BAT_THEME="Solarized (dark)"
