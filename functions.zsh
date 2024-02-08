@@ -1,4 +1,5 @@
-take() {
+# Create directory and enter it
+mkpath() {
 	mkdir -p $@ && cd ${@:$#}
 }
 
