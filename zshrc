@@ -72,8 +72,9 @@ export MAKEFLAGS="-j$(nproc)"
 
 # Options
 setopt appendhistory
-#setopt incappendhistory
 setopt extendedhistory
+#setopt incappendhistory
+setopt incappendhistorytime
 setopt nosharehistory
 setopt autocd
 setopt extendedglob
@@ -87,6 +88,7 @@ setopt pushdignoredups
 setopt pushdsilent
 setopt multios
 setopt histignorealldups
+setopt histexpiredupsfirst
 setopt histignorespace
 setopt histverify
 #setopt printexitvalue
