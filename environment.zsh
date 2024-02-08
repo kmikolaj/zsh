@@ -42,7 +42,7 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 export GREP_COLORS='mt=32'
 
 # less highlight
-export LESS=' -R -x4 '
+export LESS=' -R -i -x4 '
 #export LESSCOLORIZER='pygmentize -O style=solarized-dark'
 export LESSCOLORIZER=bat
 
