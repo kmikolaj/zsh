@@ -3,19 +3,27 @@ autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
 
 zmodload -i zsh/complist
 
-unsetopt menucomplete
-unsetopt flowcontrol
-setopt automenu
+setopt nomenucomplete # don't turn this on
+setopt noflowcontrol
+setopt automenu # don't turn this off
 setopt completeinword
 setopt alwaystoend
-setopt nolistambiguous
-setopt nocompletealiases
+setopt nolistambiguous # don't turn this on
+setopt nocompletealiases # don't understand this reverse logic
+setopt nocaseglob
+setopt nobashautolist
 
 # menu
 zstyle ':completion:*:*:*:*:*' menu select
 
+# use verbose listings when we have more information
+zstyle ':completion:*' verbose true
+
 # colors in completion menu
 #zstyle ':completion:*' list-colors ''
+
+# partial completion suggestions
+zstyle ':completion:*' list-suffixes true
 
 # complete . and .. special directories
 zstyle -e ':completion:*' special-dirs '[[ $PREFIX = (../)#(|.|..) ]] && reply=(..)'
@@ -35,7 +43,13 @@ zstyle ':completion:*' completer _oldlist _expand _complete _files
 #zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
 
 # case insensitive + hyphen insensitive
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]_-}={[:upper:]_-}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
+#zstyle ':completion:*' matcher-list '' 'm:{[:lower:]_-}={[:upper:]_-}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
+
+# case insensitive + hyphen insensitive + match partial phrase
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=* r:|=*' 'm:{a-z}={A-Z} l:|=* r:|=*'
+
+# fuzzy
+#zstyle ':completion:*' matcher-list 'r:|?=**'
 
 # rehash
 zstyle ':completion:*' rehash true

@@ -86,6 +86,7 @@ setopt check_jobs
 setopt autopushd
 setopt pushdignoredups
 setopt pushdsilent
+setopt pushdminus
 setopt multios
 setopt histignorealldups
 setopt histexpiredupsfirst
