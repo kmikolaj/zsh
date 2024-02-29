@@ -80,9 +80,8 @@ setopt autocd
 setopt extendedglob
 setopt nonomatch
 setopt notify
-setopt alwaystoend
 setopt nocorrect
-setopt check_jobs
+setopt checkjobs
 setopt autopushd
 setopt pushdignoredups
 setopt pushdsilent

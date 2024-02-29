@@ -8,7 +8,7 @@ setopt noflowcontrol
 setopt automenu # don't turn this off
 setopt completeinword
 setopt alwaystoend
-setopt nolistambiguous # don't turn this on
+setopt listambiguous # don't turn this off
 setopt nocompletealiases # don't understand this reverse logic
 setopt nocaseglob
 setopt nobashautolist
@@ -34,19 +34,22 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USERNAME -o pid,user,comm
 # disable named-directories autocompletion
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
-zstyle ':completion:*' completer _oldlist _expand _complete _files
+# completers
+zstyle ':completion:*' completer _expand _complete _list _oldlist _correct _approximate
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
 # case sensitive
 #zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # case insensitive
-#zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
+#zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
 
 # case insensitive + hyphen insensitive
-#zstyle ':completion:*' matcher-list '' 'm:{[:lower:]_-}={[:upper:]_-}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
+#zstyle ':completion:*' matcher-list 'm:{[:lower:]_-}={[:upper:]_-}' 'm:{[:lower:]}={[:upper:]} r:|[._-]=* r:|=*' 'm:{[:lower:]}={[:upper:]} l:|=* r:|=*'
 
 # case insensitive + hyphen insensitive + match partial phrase
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=* r:|=*' 'm:{a-z}={A-Z} l:|=* r:|=*'
+# https://www.reddit.com/r/zsh/comments/11dqx3e/i_want_to_tab_complete_partials_words_with_no/
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=* r:|=*' 'm:{a-z}={A-Z} l:|=* r:|=*'
 
 # fuzzy
 #zstyle ':completion:*' matcher-list 'r:|?=**'
