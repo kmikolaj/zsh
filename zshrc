@@ -76,6 +76,7 @@ setopt extendedhistory
 #setopt incappendhistory
 setopt incappendhistorytime
 setopt nosharehistory
+setopt noflowcontrol
 setopt autocd
 setopt extendedglob
 setopt nonomatch

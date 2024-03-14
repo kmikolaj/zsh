@@ -4,14 +4,15 @@ autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
 zmodload -i zsh/complist
 
 setopt nomenucomplete # don't turn this on
-setopt noflowcontrol
+setopt nocompletealiases # don't understand this reverse logic
 setopt automenu # don't turn this off
+setopt listambiguous
+setopt nobashautolist
+setopt noautolist
+setopt autoparamslash
 setopt completeinword
 setopt alwaystoend
-setopt listambiguous # don't turn this off
-setopt nocompletealiases # don't understand this reverse logic
 setopt nocaseglob
-setopt nobashautolist
 
 # menu
 zstyle ':completion:*:*:*:*:*' menu select
@@ -35,7 +36,7 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USERNAME -o pid,user,comm
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
 # completers
-zstyle ':completion:*' completer _expand _complete _list _oldlist _correct _approximate
+zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
 # case sensitive
