@@ -6,7 +6,7 @@ zmodload -i zsh/complist
 setopt nomenucomplete # don't turn this on
 setopt nocompletealiases # don't understand this reverse logic
 setopt automenu # don't turn this off
-setopt listambiguous
+setopt nolistambiguous
 setopt nobashautolist
 setopt noautolist
 setopt autoparamslash
@@ -36,8 +36,9 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USERNAME -o pid,user,comm
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
 # completers
-zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' completer _expand _extensions _complete
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
+zstyle ':completion:*:expand:*' tag-order expansions
 
 # case sensitive
 #zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
