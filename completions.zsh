@@ -37,6 +37,7 @@ zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-dir
 
 # completers
 zstyle ':completion:*' completer _expand _extensions _complete
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 zstyle ':completion::expand:*' tag-order expansions
 

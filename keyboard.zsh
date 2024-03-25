@@ -94,5 +94,7 @@ bindkey -s 'OM' '\n'
 # Undo Tab completion
 bindkey -M menuselect '^[' undo
 
+bindkey '^I'   complete-word       # tab          | complete
+
 # '/' is not part of the word
 WORDCHARS=${WORDCHARS/\/}
