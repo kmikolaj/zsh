@@ -105,3 +105,21 @@ is-remote-session() {
 
 	return 1
 }
+
+# coredumps
+coredump() {
+	local option=$1
+
+	if [ "$option" = "on" ]; then
+		ulimit -c unlimited
+	elif [ "$option" = "off" ]; then
+		ulimit -c 0
+	else
+		if ulimit -c | grep -E "^0$" &> /dev/null; then
+			echo "disabled"
+		else
+			echo "enabled"
+		fi
+	fi
+}
+
