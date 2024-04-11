@@ -35,6 +35,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting
 #zinit light zsh-users/zsh-history-substring-search
+zinit light felipec/git-completion
 zinit light wizard-28/git-flow-completion
 zinit light kmikolaj/lesspipe
 zinit light olets/zsh-abbr
