@@ -26,5 +26,7 @@ fi
 export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 # too boldy
 #export FREETYPE_PROPERTIES="truetype:interpreter-version=40 cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
+# less boldy
+#export FREETYPE_PROPERTIES="autofitter:no-stem-darkening=0 autofitter:darkening-parameters=500,0,1000,400,1250,250,1500,0"
 
 # vim: set ai noet ts=4 sts=4 sw=4 ft=zsh:
