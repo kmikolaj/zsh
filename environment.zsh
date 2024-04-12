@@ -81,3 +81,8 @@ export CMAKE_GENERATOR=Ninja
 
 # visual studio code embedded terminal
 source ${HOME}/.zsh/config/vscode.zsh
+
+# sccache
+export SCCACHE_DIRECT=true
+export SCCACHE_CACHE_SIZE=2G
+export SCCACHE_DIR=/tmp/sccache
