@@ -72,6 +72,7 @@ alias ffplay='ffplay -autoexit -nodisp -loglevel 8'
 alias atmux='tmux new-session -A -s'
 # search
 alias ff='fd -t file -g'
+alias fdi='fd --no-ignore-vcs'
 # net-tools
 alias ifconfig='ip addr show'
 alias route='ip route show'
