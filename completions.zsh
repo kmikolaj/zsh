@@ -36,7 +36,7 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USERNAME -o pid,user,comm
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
 # completers
-zstyle ':completion:*' completer _expand _extensions _complete
+zstyle ':completion:*' completer _oldlist _expand _extensions _complete
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 zstyle ':completion:*:expand:*' tag-order expansions
 
