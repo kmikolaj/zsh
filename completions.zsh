@@ -3,12 +3,12 @@ autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
 
 zmodload -i zsh/complist
 
-setopt nomenucomplete # don't turn this on
-setopt nocompletealiases # don't understand this reverse logic
-setopt automenu # don't turn this off
+setopt nomenucomplete # don't turn this on (don't autoselect first entry)
+setopt nocompletealiases # don't understand this reverse logic (complete alias like command)
+setopt automenu # don't turn this off (use menu)
 setopt nolistambiguous
 setopt nobashautolist
-setopt noautolist
+setopt autolist
 setopt autoparamslash
 setopt completeinword
 setopt alwaystoend
