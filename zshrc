@@ -110,6 +110,9 @@ umask 027
 tabs -0
 tabs -4
 
+# Options
+completion_autoselect_first=false
+
 # Environment
 source ${HOME}/.zsh/config/environment.zsh
 
