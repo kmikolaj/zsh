@@ -57,7 +57,7 @@ zstyle ':completion:*:expand:*' tag-order expansions
 
 # case insensitive + hyphen insensitive + match partial phrase
 # https://www.reddit.com/r/zsh/comments/11dqx3e/i_want_to_tab_complete_partials_words_with_no/
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{a-z}={A-Z} r:|[._-]=* r:|=*' 'm:{a-z}={A-Z} l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # fuzzy
 #zstyle ':completion:*' matcher-list 'r:|?=**'
