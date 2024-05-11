@@ -79,6 +79,9 @@ bindkey -M viins '^[[1;3D' backward-word
 # [Space] - don't do history expansion
 bindkey ' ' magic-space
 
+# [Ctrl-X ?] - generate debug completion log
+bindkey "^X?" _complete_debug
+
 # Edit the current command line in $EDITOR
 autoload -U edit-command-line
 zle -N edit-command-line
