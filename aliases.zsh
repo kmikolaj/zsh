@@ -6,7 +6,14 @@ alias fgrep='grep -F'
 alias hgrep="fc -El 0 | grep"
 alias sgrep='grep -I -R -n -H -C 5 --exclude-dir={.git,.svn,CVS}'
 
-if which exa &> /dev/null; then
+if which eza &> /dev/null; then
+	alias ls='eza -g -F --group-directories-first'
+	alias ll='ls -l'
+	alias la='ll -a'
+	alias lt='ll -s modified'
+	alias lz='ll -s size'
+	alias lx='ll -s extension'
+elif which exa &> /dev/null; then
 	alias ls='exa -g -F --group-directories-first'
 	alias ll='ls -l'
 	alias la='ll -a'
