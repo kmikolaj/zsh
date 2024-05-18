@@ -1,5 +1,16 @@
 # hostname shodan
 
+# Qt HiDPI
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_ENABLE_HIGHDPI_SCALING=0
+
+# Qt platform
+if which qt6ct &> /dev/null; then
+	export QT_QPA_PLATFORMTHEME=qt6ct
+elif which qt5ct &> /dev/null; then
+	export QT_QPA_PLATFORMTHEME=qt5ct
+fi
+
 # toolchain directory
 export LOCAL_TOOLCHAIN_PATH=${HOME}/virt/rg/toolchain
 

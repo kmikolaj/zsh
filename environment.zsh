@@ -58,9 +58,6 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
-# HiDPI Qt
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
-
 # wireshark ssl/tls decryption
 export SSLKEYLOGFILE=/tmp/ssl.pms
 

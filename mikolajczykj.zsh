@@ -10,7 +10,7 @@ export DISTCC_DIR=/tmp/distcc
 # mc
 export MC_SKIN=$HOME/.config/mc/skin/solarized.ini
 
-# HiDPI Qt
+# Qt HiDPI
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
 #export QT_SCREEN_SCALE_FACTORS="HDMI-A-0=1;DisplayPort-0=1.5"
