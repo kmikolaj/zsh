@@ -76,5 +76,8 @@ export RIPGREP_CONFIG_PATH=${XDG_CONFIG_HOME}/ripgrep/rg.conf
 # eza dashes
 export EXA_COLORS="xx=0"
 
+# cmake default generator
+export CMAKE_GENERATOR=Ninja
+
 # visual studio code embedded terminal
 source ${HOME}/.zsh/config/vscode.zsh
