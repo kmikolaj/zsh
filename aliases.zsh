@@ -124,6 +124,7 @@ alias vf='cd'
 if grep ID_LIKE /etc/*release | grep debian &> /dev/null; then
 	alias bat=batcat
 	alias fd=fdfind
+	alias build-deb='dpkg-buildpackage -rfakeroot -uc -nc -b'
 fi
 
 # Wayland compatibility alias
