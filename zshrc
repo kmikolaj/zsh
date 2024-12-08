@@ -93,6 +93,7 @@ setopt histignorealldups
 setopt histexpiredupsfirst
 setopt histignorespace
 setopt histverify
+setopt histexpand
 #setopt printexitvalue
 setopt nobeep
 setopt nointeractivecomments
