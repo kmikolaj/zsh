@@ -13,6 +13,7 @@ if which eza &> /dev/null; then
 	alias lt='ll -s modified'
 	alias lz='ll -s size'
 	alias lx='ll -s extension'
+	alias lb='ll -B'
 elif which exa &> /dev/null; then
 	alias ls='exa -g -F --group-directories-first'
 	alias ll='ls -l'
@@ -20,6 +21,7 @@ elif which exa &> /dev/null; then
 	alias lt='ll -s modified'
 	alias lz='ll -s size'
 	alias lx='ll -s extension'
+	alias lb='ll -B'
 else
 	alias ls='ls -T0 --color -v -F -N -h --group-directories-first'
 	alias ll='ls -l'
@@ -27,6 +29,7 @@ else
 	alias lt='ll -rt'                   # sort by modified
 	alias lz='ll -rS'                   # sort by size
 	alias lx='ll -X'                    # sort by extension
+	alias lb='ll --block-size=1'        # list bytes
 fi
 alias lr='ls -R'                        # recursive ls
 alias lm='la | less -RFe'
