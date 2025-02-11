@@ -8,6 +8,7 @@ setopt automenu # don't turn this off (use menu)
 setopt nolistambiguous
 setopt nobashautolist
 setopt autoparamslash
+setopt autoremoveslash
 setopt completeinword
 setopt alwaystoend
 setopt nocaseglob
