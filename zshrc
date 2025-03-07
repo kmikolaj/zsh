@@ -40,6 +40,7 @@ zinit light wizard-28/git-flow-completion
 zinit light kmikolaj/lesspipe
 zinit light olets/zsh-abbr
 zinit light agkozak/zsh-z
+zinit light magidc/fzf-z
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
