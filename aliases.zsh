@@ -90,6 +90,8 @@ alias route='ip route show'
 alias netstat='ss -atu'
 alias arp='ip neigh'
 alias ping='ping -O'
+# legacy scp protocol
+alias scpo='scp -O' 
 # silver searcher is ripgrep
 alias rgi='rg --no-ignore-vcs'
 alias ag=rg
