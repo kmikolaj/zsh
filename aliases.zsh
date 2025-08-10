@@ -59,10 +59,15 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias nvim='nvim -p'
-alias vim='nvim'
-alias vimdiff='nvim -O -d'
-alias rvim='nvim -Z'
-alias vi='vim'
+if ! command -v vim &> /dev/null; then
+  alias vim='nvim'
+fi
+if ! command -v vimdiff &> /dev/null; then
+  alias vimdiff='nvim -O -d'
+fi
+if ! command -v vi &> /dev/null; then
+  alias vi='vim'
+fi
 alias gvim='nvim-qt -- -p'
 alias gdb='gdb -q'
 alias hex='od -Ax -tx1'
