@@ -116,6 +116,11 @@ tabs -4
 # Options
 completion_autoselect_first=false
 
+# Bash compatibility
+if [ -e /etc/profile.d/nvim.sh ]; then
+  source /etc/profile.d/nvim.sh
+fi
+
 # Environment
 source ${HOME}/.zsh/config/environment.zsh
 
