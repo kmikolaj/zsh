@@ -120,6 +120,9 @@ alias -g C="|column -t"
 alias -g CA="2>&1 |bat -A"
 alias -g TEE="2>&1 |tee -i"
 
+# Some magic to use alias with sudo
+alias sudo='sudo '
+
 # Suffix alias
 alias -s log="tail -f"
 
