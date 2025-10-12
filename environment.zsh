@@ -53,11 +53,6 @@ export MANPAGER="less -R -i -s -M +Gg --use-color"
 export BAT_THEME="Solarized (dark)"
 export BAT_STYLE="numbers,changes,rule"
 
-# Compose key - universal X11 method
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-
 # wireshark ssl/tls decryption
 export SSLKEYLOGFILE=/tmp/ssl.pms
 
