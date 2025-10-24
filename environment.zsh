@@ -5,7 +5,7 @@ source ${HOME}/.environment
 
 # Unique entries in PATH
 typeset -aU path
-path=("$HOME/bin" $path "/opt/tools/android/android-sdk/platform-tools")
+path=("$HOME/bin" "$HOME/.local/bin" $path "/opt/tools/android/android-sdk/platform-tools")
 
 # Ruby Gem Environment
 if which ruby >/dev/null && which gem >/dev/null; then
