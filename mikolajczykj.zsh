@@ -29,6 +29,9 @@ fi
 alias update='sudo apt clean && sudo apt update && sudo apt full-upgrade && sudo apt autoremove --purge'
 alias vnc6000='vncviewer -PasswordFile=$HOME/.vnc/passwd'
 
+# security
+export NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/local-ca.crt
+
 # Wireshark remote capture
 capture() {
 	local host=${1}
