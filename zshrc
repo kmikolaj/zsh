@@ -149,7 +149,7 @@ function chpwd() {
 
 # Visual bell after execute
 precmd () {
-	[[ -n $TMUX ]] && echo -n -e "\a"
+	[[ -n "$TMUX" || -n "$ZELLIJ" ]] && echo -ne "\a"
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/config/p10k.zsh.
