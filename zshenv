@@ -6,17 +6,4 @@ export XDG_CACHE_HOME=${XDG_CACHE_HOME:=${HOME}/.cache}
 export ZSH_CACHE_DIR=${XDG_CACHE_HOME}/zsh
 export ZSH_COMPDUMP=${ZSH_CACHE_DIR}/zcompdump
 
-# Localization
-#export LC_CTYPE="pl_PL.UTF-8"
-export LC_NUMERIC="pl_PL.UTF-8"
-export LC_TIME="pl_PL.UTF-8"
-export LC_COLLATE="pl_PL.UTF-8"
-#export LC_MONETARY="pl_PL.UTF-8"
-export LC_PAPER="pl_PL.UTF-8"
-#export LC_NAME="pl_PL.UTF-8"
-export LC_ADDRESS="pl_PL.UTF-8"
-export LC_TELEPHONE="pl_PL.UTF-8"
-export LC_MEASUREMENT="pl_PL.UTF-8"
-#export LC_IDENTIFICATION="pl_PL.UTF-8"
-
 # vim: set ai noet ts=4 sts=4 sw=4 ft=zsh:
