@@ -56,6 +56,8 @@ export BAT_STYLE="numbers,changes,rule"
 # wireshark ssl/tls decryption
 export SSLKEYLOGFILE=/tmp/ssl.pms
 
+# sdl2 audio
+export SDL_AUDIODRIVER=pipewire
 # sdl2 midi
 export SDL_SOUNDFONTS=/usr/share/soundfonts/FluidR3_GM.sf2
 
