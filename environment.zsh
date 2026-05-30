@@ -57,7 +57,7 @@ export BAT_STYLE="numbers,changes,rule"
 export SSLKEYLOGFILE=/tmp/ssl.pms
 
 # sdl2 audio
-export SDL_AUDIODRIVER=pipewire
+export SDL_AUDIODRIVER=pulse
 # sdl2 midi
 export SDL_SOUNDFONTS=/usr/share/soundfonts/FluidR3_GM.sf2
 
