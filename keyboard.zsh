@@ -1,8 +1,11 @@
-# Make sure that the terminal is in application mode when zle is active, since
-# only then values from $terminfo are valid
+# Make sure that the terminal is in application cursor key mode when zle is
+# active, since only then values from $terminfo are valid.
+# smkx enables DECCKM *and* DECKPAM (application keypad), and DECKPAM makes
+# KP_Enter send ^[OM instead of \r - so put the keypad back to numeric.
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   function zle-line-init() {
     echoti smkx
+    print -n '\e>'      # DECKPNM - numeric keypad
   }
   function zle-line-finish() {
     echoti rmkx
@@ -86,13 +89,6 @@ bindkey "^X?" _complete_debug
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
-
-# Keybindings for gnome-terminal
-bindkey -s 'Oo' '/'
-bindkey -s 'Oj' '*'
-bindkey -s 'Om' '-'
-bindkey -s 'Ok' '+'
-bindkey -s 'OM' '\n'
 
 # Undo Tab completion
 bindkey -M menuselect '^[' undo
