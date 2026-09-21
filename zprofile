@@ -16,7 +16,7 @@ if [[ $(echo ${ubuntulike[@]} | grep -Fw $distro) ]]; then
 elif [[ $(echo ${archlike[@]} | grep -Fw $distro) ]]; then
 	export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 	# show latest archlinux.org post
-	if [ -x ~/bin/archlinux-last-feed ]; then
+	if [[ -o interactive && -x ~/bin/archlinux-last-feed ]]; then
 		~/bin/archlinux-last-feed
 	fi
 fi
