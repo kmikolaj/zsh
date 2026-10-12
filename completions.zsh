@@ -78,6 +78,9 @@ zstyle ':completion:*:*:nvim:*:*files' ignored-patterns '*.(pyc|o)'
 # ignore completion functions for commands you don't have
 zstyle ':completion:*:functions' ignored-patterns '_*'
 
+# ignore internal parameters when completing at command position (like: _p9k__*) 
+zstyle ':completion:*:-command-:*:parameters' ignored-patterns '_*'
+
 # cache
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path $ZSH_CACHE_DIR
