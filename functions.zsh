@@ -59,6 +59,7 @@ else
 				*.tbz2)          tar xvjf $1         ;;
 				*.tgz)           tar xvzf $1         ;;
 				*.[zZ][iI][pP])  7z x $1             ;;
+				*.epub)          7z x $1             ;;
 				*.Z)             uncompress $1       ;;
 				*.7z)            7z x $1             ;;
 				*.xz)            xz -d $1            ;;

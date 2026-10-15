@@ -1,0 +1,4 @@
+#compdef unpack
+
+# complete only archives handled by unpack() (see functions.zsh)
+_files -g "*.(tar.zst|bz2|gz|xz|tar|tbz2|tgz|7z|Z|[rR][aA][rR]|[zZ][iI][pP]|epub)(-.)"
