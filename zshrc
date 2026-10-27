@@ -35,6 +35,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting
 #zinit light zsh-users/zsh-history-substring-search
+# add cherry-pick to common commands (re-applied after each update)
+zinit ice reset atclone"sed -i '/^\tcheckout:/a\\\\tcherry-pick:\"apply the changes introduced by some existing commits\"' src/_git" atpull'%atclone'
 zinit light felipec/git-completion
 zinit light wizard-28/git-flow-completion
 zinit light kmikolaj/lesspipe
