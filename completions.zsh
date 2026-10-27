@@ -24,6 +24,9 @@ fi
 # menu
 zstyle ':completion:*:*:*:*:*' menu select
 
+# Tab types a real TAB only on an empty line or indentation, otherwise it completes
+# (fixes mime<Tab><Tab>: first Tab leaves the cursor at line start before "-mime")
+zstyle -e ':completion:*' insert-tab '[[ -z $PREFIX$SUFFIX ]] && reply=(yes) || reply=(pending)'
 # use verbose listings when we have more information
 zstyle ':completion:*' verbose true
 
